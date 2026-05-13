@@ -4,7 +4,6 @@ let dec = document.querySelector(".icon1")
 let v = 0;
 let str = document.querySelector(".rstbtn")
 let timer = document.querySelector(".timer")
-let cntrl = document.querySelector(".strt-btn")
 
 inc.addEventListener("click", function() {
     v = v + 1;
@@ -25,7 +24,4 @@ str.addEventListener("click", function() {
     count.innerText = po;
 
 });
-cntrl.addEventListener("click",function(){
-    cntrl.
-})
 
