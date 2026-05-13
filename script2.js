@@ -2,18 +2,18 @@
 let cntrl = document.querySelector(".strt-btn")
 let sec = document.querySelector(".sec")
 let min = document.querySelector(".min")
-let t = 0
-let m = 0
+let t = "00"
+let m = "00"
 
 cntrl.addEventListener("click", function () {
     console.log("clicked")
     let timer = setInterval(() => {
-        t = t+1
+        t = (parseInt(t) + 1).toString().padStart(2, '0')
         sec.innerText = t
         if(t==60){
-            t=0
+            t="00"
             sec.innerText = t
-            m = m+1
+            m = (parseInt(m) + 1).toString().padStart(2, '0')
             min.innerText = m
         }
 
@@ -25,8 +25,8 @@ cntrl.addEventListener("click", function () {
     let rst = document.querySelector(".rst-btn")
     rst.addEventListener("click", function () {
         clearInterval(timer)
-        t = 0
-        m = 0
+        t = "00"
+        m = "00"
         sec.innerText = t
         min.innerText = m
     })
